@@ -1,6 +1,6 @@
 {
   "name": "print-image-cli",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Print inline image cli ",
   "main": "index.js",
   "filename": "index.js",
