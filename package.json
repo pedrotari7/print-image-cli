@@ -1,12 +1,12 @@
 {
   "name": "print-image-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Print inline image cli ",
   "main": "index.js",
   "filename": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node test.js"
   },
   "repository": {
     "type": "git",
