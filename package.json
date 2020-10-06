@@ -1,0 +1,29 @@
+{
+  "name": "print-image-cli",
+  "version": "1.0.0",
+  "description": "Print inline image cli ",
+  "main": "index.js",
+  "filename": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrotari7/print-image-cli.git"
+  },
+  "keywords": [
+    "print",
+    "image",
+    "cli"
+  ],
+  "author": "Pedro Alvito",
+  "bugs": {
+    "url": "https://github.com/pedrotari7/print-image-cli/issues"
+  },
+  "homepage": "https://github.com/pedrotari7/print-image-cli#readme",
+  "files": [
+    "index.js",
+    "imgcat"
+  ]
+}
