@@ -1,7 +1,7 @@
 const cp = require('child_process');
 const fs = require('fs');
 
-const imgcat = `${__dirname}/imgcat`;
+const imgcat = './imgcat';
 
 const fd = fs.openSync(imgcat, 'r');
 
