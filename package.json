@@ -24,6 +24,10 @@
   "homepage": "https://github.com/pedrotari7/print-image-cli#readme",
   "files": [
     "index.js",
+    "follow-redirect.js",
     "imgcat"
-  ]
+  ],
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }
