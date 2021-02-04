@@ -18,10 +18,8 @@ const printImage = async (source) => {
   if (isUrl) {
     if (!isImage) {
       source = await follow(source);
-      executeCMD(`${imgcat} -u ${source}`);
-      return;
     }
-    executeCMD(`${imgcat} -u ${source.replace('?{imageMachine}', '') + '?height=200'}`);
+    executeCMD(`${imgcat} -u ${source}`);
   } else {
     executeCMD(`${imgcat} ${source}`);
   }
