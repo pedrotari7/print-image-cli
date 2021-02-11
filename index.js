@@ -9,7 +9,17 @@ const fd = fs.openSync(imgcat, 'r');
 
 fs.fchmodSync(fd, 0o777);
 
-const executeCMD = (cmd) => cp.execSync(cmd, { stdio: 'inherit' });
+const exec = (cmd) =>
+  new Promise((res, rej) => {
+    cp.exec(cmd, { stdio: 'inherit' }, (error, stdout) => {
+      if (error) {
+        rej(error);
+        return;
+      }
+      console.log(stdout);
+      res();
+    });
+  });
 
 const printImage = async (source) => {
   const isUrl = source.startsWith('http');
@@ -19,9 +29,9 @@ const printImage = async (source) => {
     if (!isImage) {
       source = await follow(source);
     }
-    executeCMD(`${imgcat} -u ${source}`);
+    await exec(`${imgcat} -u ${source}`);
   } else {
-    executeCMD(`${imgcat} ${source}`);
+    await exec(`${imgcat} ${source}`);
   }
 };
 
